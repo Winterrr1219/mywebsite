@@ -1,0 +1,272 @@
+/* General Styles */
+body {
+    background-color: #F0F0F0 !important;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styles */
+header {
+    background-color: #000000; /* Header background color */
+    color: #ffffff; /* Text color for header elements */
+    padding: 20px 20px;
+    display: flex;
+    justify-content: space-between; /* Aligns items to both sides of the header */
+    align-items: center;
+}
+
+header .logo a {
+    font-size: 2.0rem;
+    font-weight: bold;
+    color: #ffffff; 
+    text-decoration: none; 
+}
+
+header .scrollable-nav {
+    margin-left: auto; /* Pushes the nav bar to the right side */
+    display: flex;
+    justify-content: flex-end; /* Aligns items to the right within the nav bar */
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 0 15px;
+    background-color: #000000; /* Background color for contrast */
+    border-radius: 8px;
+}
+
+.scrollable-nav::-webkit-scrollbar {
+    display: none;  /* Hide scrollbar for Chrome, Safari, and Opera */
+}
+
+.scrollable-nav {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.scrollable-nav ul {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.scrollable-nav li {
+    margin-right: 20px;
+}
+
+.scrollable-nav a {
+    color: #ffffff; /* Default text color */
+    text-decoration: none; /* Remove underline from links */
+    padding: 10px 15px; /* Add padding for better spacing */
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+.scrollable-nav a:hover,
+.scrollable-nav a.active {
+    color: #000000 !important; /* Ensure text color changes to black on hover */
+    background-color: #ffffff; /* White background on hover */
+}
+
+.scrollable-nav .sign-in {
+    margin-left: auto;
+}
+
+
+/* Footer Styles */
+.footer {
+    padding: 20px 0;
+    background-color: #000000;
+}
+
+.footer .social-icons a {
+    color: #000000;
+    margin-right: 15px;
+    font-size: 2rem; /* Increased icon size */
+}
+
+.footer .social-icons a:hover {
+    color: #0804d4;
+}
+
+.footer .contact-info {
+    margin: 20px 0;
+}
+
+
+
+/* About Us Section */
+#about-us-section {
+    display: none; /* Ensure it’s hidden by default */
+    position: relative; /* Allow positioning of child elements */
+}
+
+.nav-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    background-color: #fff; /* Adjust based on your navbar background color */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow for the navbar */
+    display: flex;
+    justify-content: flex-end; /* Align the button to the right */
+}
+
+.hero-section {
+    position: relative;
+    height: 60vh;
+    background-image: url('https://www.gravelspringsltd.com/assets/uploads/opportunity_banner2023062927442824071688076644.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.7);
+}
+
+.hero-content {
+    text-align: center;
+    color: #fff;
+    position: relative;
+    z-index: 1;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+}
+
+.about-content h2 {
+    color: #fbfbfb;
+    margin-bottom: 1.5rem;
+}
+
+.go-back-btn {
+    font-size: 1rem;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    background-color: #ffffff; 
+    color: #000000; 
+    border: none; 
+    border-radius: 25px; 
+    transition: background-color 0.3s, color 0.3s; 
+}
+
+.go-back-btn:hover {
+    background-color: #ffffff; 
+    color: #000000; 
+}
+.container {
+    padding: 20px;
+}
+
+.package-details {
+    max-width: 900px;
+    margin: auto;
+    background: linear-gradient(#ffffff,#f3eed8);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.package-details img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+
+.package-details h2 {
+    font-size: 2.5em;
+    color: #333;
+}
+
+.package-details p {
+    font-size: 1em;
+    color: #666;
+    line-height: 1.6;
+}
+
+.package-price {
+    font-size: 1.6em;
+    font-weight: bold;
+}
+
+.schedule {
+    margin-top: 40px;
+}
+
+.schedule h3 {
+    font-size: 2em;
+    color: #333;
+    border-bottom: 2px solid #000000;
+    padding-bottom: 10px;
+}
+
+.schedule ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.schedule li {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(#f2f5e5,#ffffff);
+    border: 1px solid #F2EFE5;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.schedule li img {
+    width: 200px;
+    height: auto;
+    border-radius: 8px;
+    margin-right: 15px;
+}
+
+.schedule li p {
+    margin: 0;
+    font-size: 1em;
+    color: #666;
+    line-height: 1.6;
+}
+
+
+
+#countdown {
+    display: inline-block;
+    background: linear-gradient(#765fac,#ffffff);
+    color: rgb(0, 0, 0);
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+#countdown span {
+    display: inline-block;
+    min-width: 70px;
+}
+
+#discount-msg {
+    font-size: 1.2em;
+    color: #4CAF50;
+    margin-top: 10px;
+}

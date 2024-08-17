@@ -1,0 +1,284 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #d1d1d1;
+}
+
+
+/* Header Styles */
+header {
+    background-color: #000000; /* Header background color */
+    color: #ffffff; /* Text color for header elements */
+    padding: 20px 20px;
+    display: flex;
+    justify-content: space-between; /* Aligns items to both sides of the header */
+    align-items: center;
+}
+
+header .logo a {
+    font-size: 2.0rem;
+    font-weight: bold;
+    color: #ffffff; 
+    text-decoration: none; 
+}
+
+header .scrollable-nav {
+    margin-left: auto; /* Pushes the nav bar to the right side */
+    display: flex;
+    justify-content: flex-end; /* Aligns items to the right within the nav bar */
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 0 15px;
+    background-color: #000000; /* Background color for contrast */
+    border-radius: 8px;
+}
+
+.scrollable-nav::-webkit-scrollbar {
+    display: none;  /* Hide scrollbar for Chrome, Safari, and Opera */
+}
+
+.scrollable-nav {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.scrollable-nav ul {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.scrollable-nav li {
+    margin-right: 20px;
+}
+
+.scrollable-nav a {
+    color: #ffffff; /* Default text color */
+    text-decoration: none; /* Remove underline from links */
+    padding: 10px 15px; /* Add padding for better spacing */
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+.scrollable-nav a:hover,
+.scrollable-nav a.active {
+    color: #000000 !important; /* Ensure text color changes to black on hover */
+    background-color: #ffffff; /* White background on hover */
+}
+
+.scrollable-nav .sign-in {
+    margin-left: auto;
+}
+
+/* Footer Styles */
+.footer {
+    padding: 20px 0;
+    background-color: #000000;
+}
+
+.footer .social-icons a {
+    color: #000000;
+    margin-right: 15px;
+    font-size: 2rem; /* Increased icon size */
+}
+
+.footer .social-icons a:hover {
+    color: #0804d4;
+}
+
+.footer .contact-info {
+    margin: 20px 0;
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+    .package {
+        
+        height:auto ;
+        width: auto;
+    }
+    }
+
+@media (max-width: 992px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logo {
+        margin-bottom: 10px;
+    }
+
+    .scrollable-nav {
+        width: 100%;
+    }
+
+    .scrollable-nav ul {
+        flex-direction: row;
+    }
+
+    .scrollable-nav li {
+        margin-right: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 100px 10px;
+    }
+
+    .hero .welcome-text h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero .welcome-text p {
+        font-size: 1rem;
+    }
+
+    .hero .form-control {
+        width: 100%;
+    }
+
+    .card-body h5 {
+        font-size: 1.25rem;
+    }
+
+    .card-body p {
+        font-size: 1rem;
+    }
+}
+
+/* About Us Section */
+#about-us-section {
+    display: none; /* Ensure it’s hidden by default */
+    position: relative; /* Allow positioning of child elements */
+}
+
+.nav-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    background-color: #fff; /* Adjust based on your navbar background color */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow for the navbar */
+    display: flex;
+    justify-content: flex-end; /* Align the button to the right */
+}
+
+
+.about-content h2 {
+    color: #fbfbfb;
+    margin-bottom: 1.5rem;
+}
+
+.go-back-btn {
+    font-size: 1rem;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    background-color: #ffffff; 
+    color: #000000; 
+    border: none; 
+    border-radius: 25px; 
+    transition: background-color 0.3s, color 0.3s; 
+}
+
+.go-back-btn:hover {
+    background-color: #e31818; 
+    color: #ffffff; 
+}
+
+
+.section h2 {
+    border-bottom: 2px solid #000000;
+    padding-bottom: 10px;
+    margin-top: 10px;
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+}
+
+/* Package Container */
+.package-container {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    gap: 20px;
+    align-items: center; /* Center items horizontally */
+}
+
+/* Package Styles */
+.package {
+    border: 1px solid #f9f9f9;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: #F2EFE5;
+    width: 100%; /* Full width for better responsiveness */
+    max-width: 500px; /* Restrict width for larger screens */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin-bottom: 20px;
+    position: relative;
+    /* Remove height and make it dynamic */
+    height: auto;
+}
+
+.package img {
+    width: 100%;
+    height: auto; /* Adjust height automatically */
+    object-fit: cover; /* Ensure the image covers the area */
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.package h3 {
+    margin-top: 10px;
+    font-size: 1.8em;
+    color: #000000;
+}
+
+.package p {
+    font-size: 1em;
+    color: #666;
+    line-height: 1.6;
+}
+
+.package-price {
+    font-size: 1.4em;
+    color: #93ea96;
+    font-weight: bold;
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+    .package {
+        width: 100%; /* Full width for smaller screens */
+    }
+
+    .package-container {
+        padding: 0 10px; /* Add some padding to the container */
+    }
+}
+.favorite-btn {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: #bad78b;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 20px;
+}
+.favorite-btn:hover {
+    background-color: #d1ecd2;
+}
+.favorite-btn.active {
+    background-color: #d6421d;
+}
+

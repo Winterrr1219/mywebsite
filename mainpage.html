@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TripX</title>
+    <link rel="stylesheet" href="mainpage.css">
+    <link rel="stylesheet" href="SignIn.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <a href="mainpage.html">TripX</a>
+        </div>
+        <nav class="scrollable-nav">
+            <ul>
+                <li class="nav-item"><a href="activityPage.html" class="nav-link text-white">Activities</a></li>
+                <li class="nav-item"><a href="favourites.html" class="nav-link text-white">Favourites</a></li>
+                <li class="nav-item"><a href="blog.html" class="nav-link text-white">Blogs/Forums</a></li>
+                <li class="nav-item"><a href="plans-packages.html" class="nav-link text-white">Plan & Package</a></li>
+                <li class="nav-item"><a href="recently_viewed.html" class="nav-link text-white">Recently Viewed</a></li>
+                <li class="nav-item" id = "userMenuItem">
+                    <button id = "signInBtn" class = "btn btn-outline-light rounded-pill px-4 py-2" style = "font-size: 14px;">Sign In</button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Pop-Up Modal -->
+    <div id="signInModal" class="modal">
+        <div class="main-container">
+            <span class="close">&times;</span>
+            <div class="form-container" id="loginContainer">
+                <h2>HAHAHA</h2>
+                <h4>Login</h4>
+                <form id="loginForm">
+                    <input type="email" id="loginEmail" placeholder="Email Address" required>
+                    <input type="password" id="loginPassword" placeholder="Password" required>
+                    <button type="submit">Login</button>
+                </form>
+                <div class="register-link">
+                    Don't have an account? <a href="#" id="showRegister">Register here</a>
+                </div>
+            <p class="terms"><br>By registering or logging in, you acknowledge and agree to <a href="#">HAHAHA's General Terms of Use</a> and <a href="#">Privacy Policy</a>.</p>
+            </div>
+
+            <div class="form-container" id="registerContainer" style="display:none;">
+                <h2>HAHAHA</h2>
+                <h4>Register</h4>
+                <form id="registerForm">
+                    <input type="text" id="registerName" placeholder="Username" required>
+                    <input type="email" id="registerEmail" placeholder="Email Address" required>
+                    <input type="password" id="registerPassword" placeholder="Password" required>
+                    <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+                    <button type="submit">Register</button>
+                </form>
+                <div class="register-link">
+                    Already have an account? <a href="#" id="showLogin">Login here</a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+ 
+    <!-- Hero Section -->
+    <section class="hero text-center text-white">
+        <img src="https://content.paulreiffer.com/wp-content/uploads/2021/04/Commercial-Travel-Destination-Images-Paul-Reiffer-Licensing-Photography-Photographer-New-Zealand-Tasman-Lake-Copyright-Banner-Image.jpg" alt="Welcome Image" class="hero-img">
+        <div class="welcome-text">
+            <h1>Welcome to Malaysia!</h1>
+            <p>Your adventure starts here</p>
+        </div>
+        <form class="d-flex justify-content-center my-4">
+            <input type="search" class="form-control rounded-pill me-2" placeholder="Search...">
+            <button type="submit" class="btn btn-primary rounded-circle">
+                <i class="bi bi-search"></i>
+            </button>
+        </form>
+    </section>
+
+    <!-- Featured Destinations -->
+    <section class="container my-5">
+        <h2 class="text-center mb-4">Explore Top Destinations</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://images.pexels.com/photos/67559/kuala-lumpur-petronas-twin-towers-malaysia-klcc-67559.jpeg?cs=srgb&dl=pexels-pixabay-67559.jpg&fm=jpg" class="card-img-top" alt="Kuala Lumpur">
+                    <div class="card-body">
+                        <h5 class="card-title">Kuala Lumpur</h5>
+                        <p class="card-text">Experience the vibrant city life and cultural landmarks.</p>
+                        <a href="detailed_activity.html" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://tourscanner.com/blog/wp-content/uploads/2022/05/things-to-do-in-Langkawi-Malaysia.jpg" class="card-img-top" alt="Langkawi">
+                    <div class="card-body">
+                        <h5 class="card-title">Langkawi</h5>
+                        <p class="card-text">Explore the beautiful beaches and lush landscapes.</p>
+                        <a href="detailed_activity.html" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://image-tc.galaxy.tf/wijpeg-9j3ux7drhby0iny1evej1e38j/sunset-at-penang-bridge.jpg?width=1920" class="card-img-top" alt="Penang">
+                    <div class="card-body">
+                        <h5 class="card-title">Penang</h5>
+                        <p class="card-text">Dive into the rich heritage and culinary delights.</p>
+                        <a href="detailed_activity.html" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Popular Activities -->
+<section class="container my-5 popular-activities">
+    <h2 class="text-center mb-4">Popular Activities</h2>
+    <div class="activity-carousel">
+        <!-- Left Arrow -->
+        <button class="carousel-control left">&#9664;</button>
+        
+        <!-- Carousel Container -->
+        <div class="carousel-items">
+            <!-- City Excitement -->
+            <div class="activity-card">
+                <h4 class="text-center mb-2">City Excitement</h4>
+                <img src="https://www.shutterstock.com/image-photo/asphalt-road-leading-into-city-600nw-1774172018.jpg" class="card-img-top" alt="City Excitement">
+                <div class="overlay">
+                    <h3><a href="detailed_activity.html" class="text-white text-decoration-none">City Excitement</a></h3>
+                    <p>Discover the vibrant energy and attractions of the city.</p>
+                </div>
+            </div>
+
+            <!-- Nature -->
+            <div class="activity-card">
+                <h4 class="text-center mb-2">Nature</h4>
+                <img src="https://static.vecteezy.com/system/resources/thumbnails/024/747/849/small_2x/tranquil-scene-of-flowing-water-in-autumn-forest-wilderness-area-generated-by-ai-photo.jpg" class="card-img-top" alt="Nature">
+                <div class="overlay">   
+                    <h3><a href="detailed_activity.html" class="text-white text-decoration-none">Nature</a></h3>
+                    <p>Experience the serene beauty and adventure of nature.</p>
+                </div>
+            </div>
+
+            <!-- Relaxation -->
+            <div class="activity-card">
+                <h4 class="text-center mb-2">Relaxation</h4>
+                <img src="https://burst.shopifycdn.com/photos/relaxing-in-nature.jpg?width=925&format=pjpg&exif=0&iptc=0" class="card-img-top" alt="Relaxation">
+                <div class="overlay">
+                    <h3><a href="detailed_activity.html" class="text-white text-decoration-none">Relaxation</a></h3>
+                    <p>Enjoy peaceful and rejuvenating experiences.</p>
+                </div>
+            </div>
+
+            <!-- Cultural -->
+            <div class="activity-card">
+                <h4 class="text-center mb-2">Cultural</h4>
+                <img src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/12/18/9b/0a.jpg" class="card-img-top" alt="Cultural">
+                <div class="overlay">
+                    <h3><a href="detailed_activity.html" class="text-white text-decoration-none">Cultural</a></h3>
+                    <p>Immerse yourself in the rich culture and heritage of the region.</p>
+                </div>
+            </div>
+
+            <!-- Theme Park -->
+            <div class="activity-card">
+                <h4 class="text-center mb-2">Theme Park</h4>
+                <img src="https://theedgemalaysia.com/_next/image?url=https%3A%2F%2Fassets.theedgemarkets.com%2FTheme-parks_TEM1457_20230201171851_theedgemarkets.jpg&w=1920&q=75" class="card-img-top" alt="Theme Park">
+                <div class="overlay">
+                    <h3><a href="detailed_activity.html" class="text-white text-decoration-none">Theme Park</a></h3>
+                    <p>Enjoy thrilling rides and attractions for all ages.</p>
+                </div>
+            </div>
+
+            <!-- Restaurant -->
+            <div class="activity-card">
+                <h4 class="text-center mb-2">Restaurant</h4>
+                <img src="https://cloudaen.com/assets/img/restaurant.jpg" class="card-img-top" alt="Restaurant">
+                <div class="overlay">
+                    <h3><a href="detailed_activity.html" class="text-white text-decoration-none">Restaurant</a></h3>
+                    <p>Indulge in delicious local and international cuisine.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Arrow -->
+        <button class="carousel-control right">&#9654;</button>
+    </div>
+</section>
+
+    <!-- About Us Content Section -->
+    <section id="about-us-section" class="container-fluid p-0">
+        <a href="#" onclick="hideAboutUs()" class="go-back-btn">Go back to TripX</a>
+        <div class="hero-section">
+            <div class="hero-content">
+                <h1>About Us</h1>
+                <p>For explorers everywhere.</p>
+            </div>
+        </div>
+        <div class="container my-5">
+            <div class="row text-center">
+                <!-- First Section -->
+                <div class="col-md-4 mb-4">
+                    <h2>Our Vision</h2>
+                    <p>At TravelExplorer, we envision a world where everyone is welcomed and embraced through travel. We believe that travel is a powerful tool for fostering connections and understanding among diverse cultures and communities, creating moments that matter.</p>
+                </div>
+                <!-- Second Section -->
+                <div class="col-md-4 mb-4">
+                    <h2>Our Mission</h2>
+                    <p>We are dedicated to making travel accessible and enjoyable for everyone, regardless of background or needs. Our mission is to empower every traveler by providing the information and support needed to embark on transformative journeys.</p>
+                </div>
+                <!-- Third Section -->
+                <div class="col-md-4 mb-4">
+                    <h2>Our Commitment</h2>
+                    <p>We recognize the social, economic, and environmental impacts of travel and are committed to educating travelers on making informed choices. We inspire everyone to travel with generosity and make a positive impact on the world.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer text-white mt-5 pt-5 text-center">
+        <div class="container">
+            <!-- Clickable About Us Link -->
+            <a href="javascript:void(0);" onclick="showAboutUs(event)" class="text-white">
+                <h5>About Us</h5>
+            </a>
+            <div id="about-us-content" style="display: none;">
+                <p>TravelExplorer is dedicated to helping you discover the best travel destinations and activities. Our team curates personalized experiences for travelers around the world.</p>
+            </div>
+
+            <h5>Don't wait any longer. Contact us!</h5>
+            <p>Email: support@tripx.com | Phone: +123 456 7890</p>
+
+            <div class="social-icons my-3">
+                <a href="https://www.facebook.com" class="text-white mx-2" target="_blank">
+                    <i class="bi bi-facebook" style="font-size: 2rem;"></i>
+                </a>
+                <a href="https://www.instagram.com" class="text-white mx-2" target="_blank">
+                    <i class="bi bi-instagram" style="font-size: 2rem;"></i>
+                </a>
+                <a href="https://www.twitter.com" class="text-white mx-2" target="_blank">
+                    <i class="bi bi-twitter-x" style="font-size: 2rem;"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="footer-bottom mt-4 pt-4 border-top text-center">
+            <p>&copy; 2024 TripX. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="mainpage.js"></script>
+    <script src="SignIn.js"></script>
+</body>
+</html>

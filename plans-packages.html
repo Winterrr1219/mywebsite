@@ -1,0 +1,165 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plans & Packages - Explore Malaysia</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="plans-packages.css">
+    <link rel="stylesheet" href="SignIn.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <a href="mainpage.html">TripX</a>
+        </div>
+        <nav class="scrollable-nav">
+            <ul>
+                <li class="nav-item"><a href="activityPage.html" class="nav-link text-white">Activities</a></li>
+                <li class="nav-item"><a href="favourites.html" class="nav-link text-white">Favourites</a></li>
+                <li class="nav-item"><a href="blog.html" class="nav-link text-white">Blogs/Forums</a></li>
+                <li class="nav-item"><a href="plans-packages.html" class="nav-link text-white">Plan & Package</a></li>
+                <li class="nav-item" id = "userMenuItem">
+                    <button id = "signInBtn" class = "btn btn-outline-light rounded-pill px-4 py-2" style = "font-size: 14px;">Sign In</button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    
+
+    <div class="container">
+        <section id="plans-packages" class="section">
+            <h2>Choose Your Travel Packages</h2>
+            <div class="package-container">
+                <!-- Package 1: Kuala Lumpur -->
+                <div class="package" data-package-id="kuala-lumpur">
+                    <a href="package-details.html?package=kuala-lumpur">
+                       <img src="https://cdn.pixabay.com/photo/2013/08/09/05/58/kuala-lumpur-170985_1280.jpg" alt="Kuala Lumpur">
+                       <h3>Kuala Lumpur (3D2N)</h3>
+                       <p>Explore the vibrant capital of Malaysia with its iconic Petronas Towers, bustling markets, and rich cultural heritage.</p>
+                       <p class="package-price">RM1,099</p>
+                    </a>
+                    <button class="favorite-btn" onclick="handleFavoriteClick('kuala-lumpur')">&#10084;</button>
+                </div>
+                <!-- Package 2: Langkawi -->
+                <div class="package" data-package-id="langkawi">
+                    <a href="package-details.html?package=langkawi">
+                       <img src="https://cdn.pixabay.com/photo/2018/03/18/16/51/nature-3237434_1280.jpg" alt="Langkawi">
+                       <h3>Langkawi (4D3N)</h3>
+                       <p>Relax on the beautiful beaches of Langkawi, an island paradise known for its clear waters, luxury resorts, and stunning landscapes.</p>
+                       <p class="package-price">RM1,199</p>
+                    </a>
+                    <button class="favorite-btn" onclick="handleFavoriteClick('langkawi')">&#10084;</button>
+                </div>
+                <!-- Package 3: Penang -->
+                <div class="package" data-package-id="penang">
+                    <a href="package-details.html?package=penang">
+                       <img src="https://cdn.pixabay.com/photo/2019/08/17/07/38/georgetown-4411602_1280.jpg" alt="Penang">
+                       <h3>Penang (4D3N)</h3>
+                       <p>Discover the historical charm of Penang, famous for its street food, colonial architecture, and cultural diversity.</p>
+                       <p class="package-price">RM999</p>
+                    </a>
+                    <button class="favorite-btn" onclick="handleFavoriteClick('penang')">&#10084;</button>
+                </div>
+                <!-- Package 4: Sabah -->
+                <div class="package" data-package-id="sabah">
+                    <a href="package-details.html?package=sabah">
+                       <img src="https://cdn.pixabay.com/photo/2020/07/11/03/46/sabah-5392664_1280.jpg" alt="Sabah">
+                       <h3>Sabah (4D3N)</h3>
+                       <p>Embark on an adventure in Sabah, home to Mount Kinabalu, lush rainforests, and incredible wildlife.</p>
+                       <p class="package-price">RM1,299</p>
+                    </a>
+                    <button class="favorite-btn" onclick="handleFavoriteClick('sabah')">&#10084;</button>
+                </div>
+                <!-- Package 5: Melaka -->
+                <div class="package" data-package-id="melaka">
+                    <a href="package-details.html?package=melaka">
+                       <img src="https://cdn.pixabay.com/photo/2015/09/25/10/04/dutch-square-957004_1280.jpg" alt="Melaka">
+                       <h3>Melaka (3D2N)</h3>
+                       <p>Explore the historical city of Melaka, known for its colonial architecture, vibrant street life, and rich heritage.</p>
+                       <p class="package-price">RM799</p>
+                    </a>
+                    <button class="favorite-btn" onclick="handleFavoriteClick('melaka')">&#10084;</button>
+                </div>
+            </div>
+        </section>
+
+    <!-- Pop-Up Modal -->
+    <div id="signInModal" class="modal">
+        <div class="main-container">
+            <span class="close">&times;</span>
+            <div class="form-container" id="loginContainer">
+                <h2>HAHAHA</h2>
+                <h4>Login</h4>
+                <form id="loginForm">
+                    <input type="email" id="loginEmail" placeholder="Email Address" required>
+                    <input type="password" id="loginPassword" placeholder="Password" required>
+                    <button type="submit">Login</button>
+                </form>
+                <div class="register-link">
+                    Don't have an account? <a href="#" id="showRegister">Register here</a>
+                </div>
+            <p class="terms"><br>By registering or logging in, you acknowledge and agree to <a href="#">HAHAHA's General Terms of Use</a> and <a href="#">Privacy Policy</a>.</p>
+            </div>
+
+            <div class="form-container" id="registerContainer" style="display:none;">
+                <h2>HAHAHA</h2>
+                <h4>Register</h4>
+                <form id="registerForm">
+                    <input type="text" id="registerName" placeholder="Username" required>
+                    <input type="email" id="registerEmail" placeholder="Email Address" required>
+                    <input type="password" id="registerPassword" placeholder="Password" required>
+                    <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+                    <button type="submit">Register</button>
+                </form>
+                <div class="register-link">
+                    Already have an account? <a href="#" id="showLogin">Login here</a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+          
+    <!-- Footer -->
+    <footer class="footer text-white mt-5 pt-5 text-center">
+        <div class="container">
+            <!-- Clickable About Us Link -->
+            <a href="javascript:void(0);" onclick="showAboutUs(event)" class="text-white">
+                <h5>About Us</h5>
+            </a>
+            <div id="about-us-content" style="display: none;">
+                <p>TravelExplorer is dedicated to helping you discover the best travel destinations and activities. Our team curates personalized experiences for travelers around the world.</p>
+            </div>
+
+            <h5>Don't wait any longer. Contact us!</h5>
+            <p>Email: support@tripx.com | Phone: +123 456 7890</p>
+
+            <div class="social-icons my-3">
+                <a href="https://www.facebook.com" class="text-white mx-2" target="_blank">
+                    <i class="bi bi-facebook" style="font-size: 2rem;"></i>
+                </a>
+                <a href="https://www.instagram.com" class="text-white mx-2" target="_blank">
+                    <i class="bi bi-instagram" style="font-size: 2rem;"></i>
+                </a>
+                <a href="https://www.twitter.com" class="text-white mx-2" target="_blank">
+                    <i class="bi bi-twitter-x" style="font-size: 2rem;"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="footer-bottom mt-4 pt-4 border-top text-center">
+            <p>&copy; 2024 TripX. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="SignIn.js"></script>
+    <script src="plans-packages.js"></script>
+
+</body>
+</html>
